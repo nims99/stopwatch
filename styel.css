@@ -1,0 +1,88 @@
+@font-face {
+  font-family: DS-DIFIB;
+  src: url(DS-DIGIB.TTF);
+}
+
+/* Mixin's */  
+@Mixin transition {
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+@mixin corners ($radius) {
+-moz-border-radius: $radius;
+-webkit-border-radius: $radius;
+border-radius: $radius; 
+-khtml-border-radius: $radius; 
+}
+
+body {
+background:black;
+font-family:'DS-DIFIB';
+height:100%;
+}
+
+.wrapper {
+width: 800px;
+margin: 30px auto;
+
+text-align:center;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+  text-transform: uppercase;
+  color:rgb(233, 233, 28);
+}
+
+#seconds, #tens{
+  font-size:2em;
+  color: green;
+}
+
+button{
+@include corners (5px);
+color: white;
+border: solid 2px white;
+text-decoration:none;
+cursor:pointer;
+font-size:1.2em;
+padding:18px 10px;
+width:180px;
+margin: 10px;
+outline: none;
+}
+  :hover{
+	border:solid 1px  white;
+	color:green;
+  }
+
+  
+
+  #button-start{
+    border-radius: 30%;
+    background-color: green;
+    border: 5px solid grey;
+  }
+
+  #button-stop{
+    border: 5px solid grey;
+    background-color: red;
+    display: inline-block;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+  }
+
+  #button-reset{
+    border-radius: 30%;
+    background-color: rgb(16, 193, 216);
+    border: 5px solid grey;
+  }
+
+  
+
